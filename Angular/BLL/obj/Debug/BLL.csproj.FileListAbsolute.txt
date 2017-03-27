@@ -7,3 +7,12 @@ C:\Users\Sacris\Desktop\Angular\BLL\obj\Debug\BLL.dll
 C:\Users\Sacris\Desktop\Angular\BLL\obj\Debug\BLL.pdb
 C:\Users\Sacris\Desktop\Angular\BLL\bin\Debug\DAL.Interfaces.dll
 C:\Users\Sacris\Desktop\Angular\BLL\bin\Debug\DAL.Interfaces.pdb
+C:\Users\Sacris\Desktop\Angular.Gallery\Angular\BLL\bin\Debug\BLL.dll
+C:\Users\Sacris\Desktop\Angular.Gallery\Angular\BLL\bin\Debug\BLL.pdb
+C:\Users\Sacris\Desktop\Angular.Gallery\Angular\BLL\bin\Debug\BLL.Interfaces.dll
+C:\Users\Sacris\Desktop\Angular.Gallery\Angular\BLL\bin\Debug\DAL.Interfaces.dll
+C:\Users\Sacris\Desktop\Angular.Gallery\Angular\BLL\bin\Debug\BLL.Interfaces.pdb
+C:\Users\Sacris\Desktop\Angular.Gallery\Angular\BLL\bin\Debug\DAL.Interfaces.pdb
+C:\Users\Sacris\Desktop\Angular.Gallery\Angular\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+C:\Users\Sacris\Desktop\Angular.Gallery\Angular\BLL\obj\Debug\BLL.dll
+C:\Users\Sacris\Desktop\Angular.Gallery\Angular\BLL\obj\Debug\BLL.pdb

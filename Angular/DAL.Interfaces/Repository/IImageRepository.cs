@@ -5,6 +5,7 @@ namespace DAL.Interfaces.Repository
 {
     public interface IImageRepository : IRepository<DalImage>
     {
-        IEnumerable<DalImage> GetByAlbumId(int key);
+        IEnumerable<DalImage> GetByUserId(int key);
+        IEnumerable<DalImage> GetByAlbumUserId(int albumId, int userId);
     }
 }

@@ -36,7 +36,10 @@ namespace Angular.Controllers
         public JsonResult GetAlbums(int id)
         {
             var albums = albumService.GetByUserId(id);
-            ArrayList list = new ArrayList();
+            ArrayList list = new ArrayList
+            {
+                new {id = int.MaxValue, name = "--Show All--"}
+            };
             foreach (var album in albums)
             {
                 list.Add(new { id = album.Id, name = album.Name });

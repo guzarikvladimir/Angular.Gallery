@@ -20,7 +20,14 @@ namespace BLL.Services
 
         public List<ImageEntity> GetAll()
         {
-            throw new System.NotImplementedException();
+            return imageRepository?.GetAll().Select(image => new ImageEntity()
+            {
+                Name = image.Name,
+                Description = image.Description,
+                AlbumId = image.AlbumId,
+                ExtensionId = image.ExtensionId,
+                IsTradable = image.IsTradable
+            }).ToList();
         }
 
         public ImageEntity GetById()
@@ -28,9 +35,22 @@ namespace BLL.Services
             throw new System.NotImplementedException();
         }
 
-        public List<ImageEntity> GetByAlbumId(int key)
+        public List<ImageEntity> GetByUserId(int key)
         {
-            var images = imageRepository.GetByAlbumId(key);
+            var images = imageRepository.GetByUserId(key);
+            return images?.Select(image => new ImageEntity()
+            {
+                Name = image.Name,
+                Description = image.Description,
+                AlbumId = image.AlbumId,
+                ExtensionId = image.ExtensionId,
+                IsTradable = image.IsTradable
+            }).ToList();
+        }
+
+        public List<ImageEntity> GetByAlbumUserId(int albumId, int userId)
+        {
+            var images = imageRepository.GetByAlbumUserId(albumId, userId);
             return images?.Select(image => new ImageEntity()
             {
                 Name = image.Name,

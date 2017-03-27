@@ -1,6 +1,7 @@
 ﻿using Angular.Models;
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Web.Mvc;
@@ -23,12 +24,16 @@ namespace Angular.Controllers
 
         public JsonResult GetImages()
         {
-            //var images = imageService.GetAll().Select(i => i.ToMvcImage());
-            var serverPath = Server.MapPath("~");
-            var pathToImageFolder = Path.Combine(serverPath, "Content", "img");
-            var imageFiles = Directory.GetFiles(pathToImageFolder);
-            var imges = imageFiles.Select(BuildImage);
-            return Json(imges, JsonRequestBehavior.AllowGet);
+            var images = imageService.GetAll();
+            return Json(images.Select(image => new Image()
+            {
+                Id = image.Id,
+                Name = image.Name,
+                Description = image.Description,
+                AlbumId = image.AlbumId,
+                ExtensionId = image.ExtensionId,
+                Url = Path.Combine("\\Content", "img", image.Name)
+            }), JsonRequestBehavior.AllowGet);
         }
 
         public JsonResult DeleteFileAjax(string url)
@@ -38,9 +43,12 @@ namespace Angular.Controllers
             return Json(true);
         }
 
-        public JsonResult GetImagesForAlbum(int albumId)
+        public JsonResult GetImagesForAlbum(int albumId, int userId)
         {
-            var images = imageService.GetByAlbumId(albumId).Select(image => new Image()
+            var images = albumId == int.MaxValue ? 
+                imageService.GetByUserId(userId) : 
+                imageService.GetByAlbumUserId(albumId, userId);
+            return Json(images.Select(image => new Image()
             {
                 Id = image.Id,
                 Name = image.Name,
@@ -48,8 +56,7 @@ namespace Angular.Controllers
                 AlbumId = image.AlbumId,
                 ExtensionId = image.ExtensionId,
                 Url = Path.Combine("\\Content", "img", image.Name)
-            });
-            return Json(images);
+            }));
         }
 
         public JsonResult AddImageAjax(string fileName, string data, string description, int albumId, bool isTradable)

@@ -59,8 +59,8 @@
             $locationProvider.html5Mode(true);
         }
     ])
-.factory('AuthHttpResponseInterceptor', ["$q", "$location", "$rootScope", "authService",
-    function ($q, $location, $rootScope, authService) {
+.factory('AuthHttpResponseInterceptor', ["$q", "$location", "$rootScope",
+    function ($q, $location, $rootScope) {
         return {
             response: function (response) {
 
@@ -96,7 +96,7 @@
             dataCenter.getAlbumsForCurrentUser().then(function (respons) {
                 $scope.albums.available = respons.data;
                 $scope.albums.selected = $scope.albums.available[0];
-                getImages();
+                $scope.getImages();
             });
         };
 
@@ -138,12 +138,10 @@
             loginService.login($scope.loginForm.emailAddress, $scope.loginForm.password)
                 .then(function (result) {
                     $scope.loginForm.loggedIn = true;
-                    $rootScope.loggedIn = $scope.loginForm.loggedIn;
-                    if (result.data.Role === 'Admin') {
-                        $rootScope.role = 'Admin';
-                    } else {
-                        $rootScope.role = 'User';
-                    }
+                    $rootScope.loggedIn = true;
+                    $rootScope.email = result.data.Email;
+                    $rootScope.role = result.data.Role;
+                    $rootScope.id = result.data.Id;
                     authService.setCredentials(
                         result.data.Id,
                         result.data.Email,
@@ -157,8 +155,12 @@
                     }
                 },
                     function () {
-                        $scope.loginForm.loggedIn = true;
-                        $rootScope.loggedIn = $scope.loginForm.loggedIn;
+                        $scope.loginForm.loggedIn = false;
+                        $scope.loginForm.emailAddress = '';
+                        $rootScope.loggedIn = false;
+                        $rootScope.email = '';
+                        $rootScope.role = '';
+                        $rootScope.id = '';
                     });
         };
 
@@ -393,7 +395,8 @@
             method: "POST",
             url: 'http://localhost:54287/Image/GetImagesForAlbum',
             data: {
-                albumId: albumId
+                albumId: albumId,
+                userId: $rootScope.id
             },
             headers: { 'Accept': 'application/json' }
         });

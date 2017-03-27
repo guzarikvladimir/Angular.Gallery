@@ -19,7 +19,14 @@ namespace DAL.Concrete
 
         public IEnumerable<DalImage> GetAll()
         {
-            throw new NotImplementedException();
+            return context.Set<Image>().Select(image => new DalImage()
+            {
+                Name = image.Name,
+                Description = image.Description,
+                AlbumId = image.AlbumId,
+                ExtensionId = image.ExtensionId,
+                IsTradable = image.isTradable.Value
+            });
         }
 
         public DalImage GetById(int key)
@@ -27,9 +34,21 @@ namespace DAL.Concrete
             throw new NotImplementedException();
         }
 
-        public IEnumerable<DalImage> GetByAlbumId(int key)
+        public IEnumerable<DalImage> GetByUserId(int key)
         {
-            return context.Set<Image>().Where(image => image.AlbumId == key).Select(image => new DalImage()
+            return context.Set<Image>().Where(image => image.Album.UserId == key).Select(image => new DalImage()
+            {
+                Name = image.Name,
+                Description = image.Description,
+                AlbumId = image.AlbumId,
+                ExtensionId = image.ExtensionId,
+                IsTradable = image.isTradable.Value
+            });
+        }
+
+        public IEnumerable<DalImage> GetByAlbumUserId(int albumId, int userId)
+        {
+            return context.Set<Image>().Where(image => image.AlbumId == albumId && image.Album.UserId == userId).Select(image => new DalImage()
             {
                 Name = image.Name,
                 Description = image.Description,

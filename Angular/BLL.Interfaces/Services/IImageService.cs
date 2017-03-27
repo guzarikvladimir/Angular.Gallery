@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using BLL.Interfaces.Entities;
 
 namespace BLL.Interfaces.Services
@@ -7,7 +8,8 @@ namespace BLL.Interfaces.Services
     {
         List<ImageEntity> GetAll();
         ImageEntity GetById();
-        List<ImageEntity> GetByAlbumId(int key);
+        List<ImageEntity> GetByUserId(int key);
+        List<ImageEntity> GetByAlbumUserId(int albumId, int userId);
         void Create(ImageEntity image);
         void Delete(ImageEntity image);
         void Update(ImageEntity image);

@@ -30,7 +30,7 @@ namespace BLL.Services
 
         public List<AlbumEntity> GetByUserId(int key)
         {
-            return albumRepository.GetByUserId(key).Select(album => new AlbumEntity()
+            return albumRepository?.GetByUserId(key).Select(album => new AlbumEntity()
             {
                 Id = album.Id,
                 Name = album.Name,

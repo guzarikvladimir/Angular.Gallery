@@ -19,78 +19,17 @@ namespace DAL.Concrete
 
         public IEnumerable<DalAlbum> GetAll()
         {
-            //return context.Set<Album>().Select(album => new DalAlbum()
-            //{
-            //    Id = album.Id,
-            //    Name = album.Name,
-            //    CreationDate = album.CreationDate,
-            //    UserId = album.UserId,
-            //    //User = new DalUser()
-            //    //{
-            //    //    Id = album.User.Id,
-            //    //    Email = album.User.Email,
-            //    //    Password = album.User.Password,
-            //    //    Role = new DalRole()
-            //    //    {
-            //    //        Id = album.User.Role.Id,
-            //    //        Name = album.User.Role.Name
-            //    //    }
-            //    //},
-            //    Images = album.Images.Select(image => new DalImage()
-            //    {
-            //        Id = image.Id,
-            //        Name = image.Name,
-            //        Description = image.Description,
-            //        Url = image.Url,
-            //        Extension = new DalExtension()
-            //        {
-            //            Id = image.ExtensionId,
-            //            Name = image.Extension.Name
-            //        }
-            //    }).ToList()
-            //});
             throw new NotImplementedException();
         }
 
         public DalAlbum GetById(int key)
         {
-            //var album = context.Set<Album>().FirstOrDefault(a => a.Id == key);
-            //return new DalAlbum()
-            //{
-            //    Id = album.Id,
-            //    Name = album.Name,
-            //    CreationDate = album.CreationDate,
-            //    UserId = album.UserId,
-            //    //User = new DalUser()
-            //    //{
-            //    //    Id = album.User.Id,
-            //    //    Email = album.User.Email,
-            //    //    Password = album.User.Password,
-            //    //    Role = new DalRole()
-            //    //    {
-            //    //        Id = album.User.Role.Id,
-            //    //        Name = album.User.Role.Name
-            //    //    }
-            //    //},
-            //    Images = album.Images.Select(image => new DalImage()
-            //    {
-            //        Id = image.Id,
-            //        Name = image.Name,
-            //        Description = image.Description,
-            //        Url = image.Url,
-            //        Extension = new DalExtension()
-            //        {
-            //            Id = image.ExtensionId,
-            //            Name = image.Extension.Name
-            //        }
-            //    }).ToList()
-            //};
             throw new NotImplementedException();
         }
 
         public IEnumerable<DalAlbum> GetByUserId(int key)
         {
-            return context.Set<Album>().Where(a => a.UserId == key).Select(album => new DalAlbum()
+            return context.Set<Album>()?.Where(a => a.UserId == key).Select(album => new DalAlbum()
             {
                 Id = album.Id,
                 Name = album.Name,
