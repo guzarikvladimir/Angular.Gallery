@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html ng-app="gallery">
+<head>
+    <base href="/" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Gallery</title>
+    <link rel="icon" href="~/Content/ico/favicon.ico" />
+    <link href="~/Content/style/style.css" rel="stylesheet" />
+    <script src="~/Scripts/angular.min.js"></script>
+    <script src="~/Scripts/angular-route.min.js"></script>
+    <script src="~/Scripts/jquery-3.1.1.min.js"></script>
+    <script src="~/Scripts/module.js"></script>
+    <script src="~/Scripts/angular-cookies.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <header id="header">
+            <div ng-include="'/views/Angular/loginForm.html'"></div>
+        </header>
+        <div class="navcount">
+            <div class="nav">
+                <ul>
+                    <li><a href="/Angular/home">Home</a></li>
+                    <li class="drop">
+                        <a href="">Functionality</a>
+                        <div class="dropdownContain">
+                            <div class="dropOut">
+                                <ul>
+                                    <li><a href="/Angular/gallery">Gallery</a></li>
+                                    <li><a href="/Angular/addImg">Add Image</a></li>
+                                    <li><a href="/Angular/createAlbum">Create album</a></li>
+                                    <li><a href="/Angular/myAlbums">My albums</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div ng-view>Loading...</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,16 @@
+﻿<div>
+    <div class="filter">
+        <select ng-model="albums.selected"
+                ng-options="option.name for option in albums.available track by option.id"></select>
+        <button ng-clcik="getImages()">Show</button>
+    </div>
+    <div ng-repeat="img in data" class="repeat">
+        <input type="checkbox" class="invisible" id="{{img.Name}}" />
+        <label for="{{img.Name}}" class="lightbox"><img src="{{img.Url}}" /></label>
+    </div>
+    <div class="grid">
+        <div ng-repeat="img in data" class="repeat">
+            <label for="{{img.Name}}" class="grid-item"><span class="closebtn" ng-click="remove(img.Url)">&times;</span><img src="{{img.Url}}" /></label>
+        </div>
+    </div>
+</div>

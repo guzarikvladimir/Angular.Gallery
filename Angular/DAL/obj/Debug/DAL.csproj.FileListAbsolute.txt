@@ -1,0 +1,12 @@
+C:\Users\Sacris\Desktop\Angular\DAL\bin\Debug\DAL.dll
+C:\Users\Sacris\Desktop\Angular\DAL\bin\Debug\DAL.pdb
+C:\Users\Sacris\Desktop\Angular\DAL\bin\Debug\DAL.Interfaces.dll
+C:\Users\Sacris\Desktop\Angular\DAL\bin\Debug\EntityFramework.dll
+C:\Users\Sacris\Desktop\Angular\DAL\bin\Debug\ORM.dll
+C:\Users\Sacris\Desktop\Angular\DAL\bin\Debug\DAL.Interfaces.pdb
+C:\Users\Sacris\Desktop\Angular\DAL\bin\Debug\ORM.pdb
+C:\Users\Sacris\Desktop\Angular\DAL\bin\Debug\EntityFramework.xml
+C:\Users\Sacris\Desktop\Angular\DAL\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\Sacris\Desktop\Angular\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\Sacris\Desktop\Angular\DAL\obj\Debug\DAL.dll
+C:\Users\Sacris\Desktop\Angular\DAL\obj\Debug\DAL.pdb

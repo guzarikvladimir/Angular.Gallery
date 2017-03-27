@@ -1,0 +1,5 @@
+C:\Users\Sacris\Desktop\Angular\DAL.Interfaces\bin\Debug\DAL.Interfaces.dll
+C:\Users\Sacris\Desktop\Angular\DAL.Interfaces\bin\Debug\DAL.Interfaces.pdb
+C:\Users\Sacris\Desktop\Angular\DAL.Interfaces\obj\Debug\DAL.Interfaces.csprojResolveAssemblyReference.cache
+C:\Users\Sacris\Desktop\Angular\DAL.Interfaces\obj\Debug\DAL.Interfaces.dll
+C:\Users\Sacris\Desktop\Angular\DAL.Interfaces\obj\Debug\DAL.Interfaces.pdb

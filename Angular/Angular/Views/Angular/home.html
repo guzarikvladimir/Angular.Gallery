@@ -1,0 +1,9 @@
+﻿<div class="grid">
+    <p ng-show="!isEdit" ng-click="goEdit()">
+        {{text}}
+    </p>
+    <div ng-show="isEdit">
+        <textarea ng-model="text" style="width: 100%" rows="10"></textarea>
+        <button ng-click="applyEdit()">Apply</button>
+    </div>
+</div>

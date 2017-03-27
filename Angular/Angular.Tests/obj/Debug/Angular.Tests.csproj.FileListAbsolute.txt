@@ -1,0 +1,21 @@
+c:\Users\uladzimir_huzaryk\documents\visual studio 2015\Projects\Angular\Angular.Tests\bin\Debug\Angular.Tests.dll
+c:\Users\uladzimir_huzaryk\documents\visual studio 2015\Projects\Angular\Angular.Tests\bin\Debug\Angular.Tests.pdb
+c:\Users\uladzimir_huzaryk\documents\visual studio 2015\Projects\Angular\Angular.Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+c:\Users\uladzimir_huzaryk\documents\visual studio 2015\Projects\Angular\Angular.Tests\bin\Debug\nunit.framework.dll
+c:\Users\uladzimir_huzaryk\documents\visual studio 2015\Projects\Angular\Angular.Tests\bin\Debug\WebDriver.dll
+c:\Users\uladzimir_huzaryk\documents\visual studio 2015\Projects\Angular\Angular.Tests\bin\Debug\nunit.framework.xml
+c:\Users\uladzimir_huzaryk\documents\visual studio 2015\Projects\Angular\Angular.Tests\bin\Debug\WebDriver.xml
+c:\Users\uladzimir_huzaryk\documents\visual studio 2015\Projects\Angular\Angular.Tests\obj\Debug\Angular.Tests.csprojResolveAssemblyReference.cache
+c:\Users\uladzimir_huzaryk\documents\visual studio 2015\Projects\Angular\Angular.Tests\obj\Debug\Angular.Tests.dll
+c:\Users\uladzimir_huzaryk\documents\visual studio 2015\Projects\Angular\Angular.Tests\obj\Debug\Angular.Tests.pdb
+C:\Users\Sacris\Desktop\Angular\Angular.Tests\bin\Debug\Angular.Tests.dll
+C:\Users\Sacris\Desktop\Angular\Angular.Tests\bin\Debug\Angular.Tests.pdb
+C:\Users\Sacris\Desktop\Angular\Angular.Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\Sacris\Desktop\Angular\Angular.Tests\bin\Debug\nunit.framework.dll
+C:\Users\Sacris\Desktop\Angular\Angular.Tests\bin\Debug\WebDriver.dll
+C:\Users\Sacris\Desktop\Angular\Angular.Tests\bin\Debug\nunit.framework.xml
+C:\Users\Sacris\Desktop\Angular\Angular.Tests\bin\Debug\WebDriver.xml
+C:\Users\Sacris\Desktop\Angular\Angular.Tests\bin\Debug\ru\Microsoft.VisualStudio.QualityTools.UnitTestFramework.resources.dll
+C:\Users\Sacris\Desktop\Angular\Angular.Tests\obj\Debug\Angular.Tests.csprojResolveAssemblyReference.cache
+C:\Users\Sacris\Desktop\Angular\Angular.Tests\obj\Debug\Angular.Tests.dll
+C:\Users\Sacris\Desktop\Angular\Angular.Tests\obj\Debug\Angular.Tests.pdb

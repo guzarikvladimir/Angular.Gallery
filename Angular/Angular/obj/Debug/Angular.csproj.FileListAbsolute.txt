@@ -1,0 +1,184 @@
+c:\users\uladzimir_huzaryk\documents\visual studio 2015\Projects\Angular\Angular\obj\Debug\Angular.csprojResolveAssemblyReference.cache
+c:\users\uladzimir_huzaryk\documents\visual studio 2015\Projects\Angular\Angular\bin\ApplicationInsights.config
+c:\users\uladzimir_huzaryk\documents\visual studio 2015\Projects\Angular\Angular\bin\roslyn\csc.exe
+c:\users\uladzimir_huzaryk\documents\visual studio 2015\Projects\Angular\Angular\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+c:\users\uladzimir_huzaryk\documents\visual studio 2015\Projects\Angular\Angular\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+c:\users\uladzimir_huzaryk\documents\visual studio 2015\Projects\Angular\Angular\bin\roslyn\Microsoft.CodeAnalysis.dll
+c:\users\uladzimir_huzaryk\documents\visual studio 2015\Projects\Angular\Angular\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+c:\users\uladzimir_huzaryk\documents\visual studio 2015\Projects\Angular\Angular\bin\roslyn\Microsoft.CSharp.Core.targets
+c:\users\uladzimir_huzaryk\documents\visual studio 2015\Projects\Angular\Angular\bin\roslyn\Microsoft.VisualBasic.Core.targets
+c:\users\uladzimir_huzaryk\documents\visual studio 2015\Projects\Angular\Angular\bin\roslyn\System.Collections.Immutable.dll
+c:\users\uladzimir_huzaryk\documents\visual studio 2015\Projects\Angular\Angular\bin\roslyn\System.Reflection.Metadata.dll
+c:\users\uladzimir_huzaryk\documents\visual studio 2015\Projects\Angular\Angular\bin\roslyn\vbc.exe
+c:\users\uladzimir_huzaryk\documents\visual studio 2015\Projects\Angular\Angular\bin\roslyn\VBCSCompiler.exe
+c:\users\uladzimir_huzaryk\documents\visual studio 2015\Projects\Angular\Angular\bin\roslyn\VBCSCompiler.exe.config
+c:\users\uladzimir_huzaryk\documents\visual studio 2015\Projects\Angular\Angular\bin\Angular.dll.config
+c:\users\uladzimir_huzaryk\documents\visual studio 2015\Projects\Angular\Angular\bin\Angular.dll
+c:\users\uladzimir_huzaryk\documents\visual studio 2015\Projects\Angular\Angular\bin\Angular.pdb
+c:\users\uladzimir_huzaryk\documents\visual studio 2015\Projects\Angular\Angular\bin\Microsoft.AI.Agent.Intercept.dll
+c:\users\uladzimir_huzaryk\documents\visual studio 2015\Projects\Angular\Angular\bin\Microsoft.AI.DependencyCollector.dll
+c:\users\uladzimir_huzaryk\documents\visual studio 2015\Projects\Angular\Angular\bin\Microsoft.AI.PerfCounterCollector.dll
+c:\users\uladzimir_huzaryk\documents\visual studio 2015\Projects\Angular\Angular\bin\Microsoft.AI.ServerTelemetryChannel.dll
+c:\users\uladzimir_huzaryk\documents\visual studio 2015\Projects\Angular\Angular\bin\Microsoft.AI.Web.dll
+c:\users\uladzimir_huzaryk\documents\visual studio 2015\Projects\Angular\Angular\bin\Microsoft.AI.WindowsServer.dll
+c:\users\uladzimir_huzaryk\documents\visual studio 2015\Projects\Angular\Angular\bin\Microsoft.ApplicationInsights.dll
+c:\users\uladzimir_huzaryk\documents\visual studio 2015\Projects\Angular\Angular\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+c:\users\uladzimir_huzaryk\documents\visual studio 2015\Projects\Angular\Angular\bin\Microsoft.Web.Infrastructure.dll
+c:\users\uladzimir_huzaryk\documents\visual studio 2015\Projects\Angular\Angular\bin\Newtonsoft.Json.dll
+c:\users\uladzimir_huzaryk\documents\visual studio 2015\Projects\Angular\Angular\bin\System.Net.Http.Formatting.dll
+c:\users\uladzimir_huzaryk\documents\visual studio 2015\Projects\Angular\Angular\bin\System.Web.Helpers.dll
+c:\users\uladzimir_huzaryk\documents\visual studio 2015\Projects\Angular\Angular\bin\System.Web.Http.dll
+c:\users\uladzimir_huzaryk\documents\visual studio 2015\Projects\Angular\Angular\bin\System.Web.Http.WebHost.dll
+c:\users\uladzimir_huzaryk\documents\visual studio 2015\Projects\Angular\Angular\bin\System.Web.Mvc.dll
+c:\users\uladzimir_huzaryk\documents\visual studio 2015\Projects\Angular\Angular\bin\System.Web.Razor.dll
+c:\users\uladzimir_huzaryk\documents\visual studio 2015\Projects\Angular\Angular\bin\System.Web.Webpages.Deployment.dll
+c:\users\uladzimir_huzaryk\documents\visual studio 2015\Projects\Angular\Angular\bin\System.Web.Webpages.dll
+c:\users\uladzimir_huzaryk\documents\visual studio 2015\Projects\Angular\Angular\bin\System.Web.Webpages.Razor.dll
+c:\users\uladzimir_huzaryk\documents\visual studio 2015\Projects\Angular\Angular\bin\Microsoft.AI.DependencyCollector.xml
+c:\users\uladzimir_huzaryk\documents\visual studio 2015\Projects\Angular\Angular\bin\Microsoft.AI.ServerTelemetryChannel.xml
+c:\users\uladzimir_huzaryk\documents\visual studio 2015\Projects\Angular\Angular\bin\Microsoft.AI.Web.xml
+c:\users\uladzimir_huzaryk\documents\visual studio 2015\Projects\Angular\Angular\bin\Microsoft.AI.WindowsServer.xml
+c:\users\uladzimir_huzaryk\documents\visual studio 2015\Projects\Angular\Angular\bin\Microsoft.ApplicationInsights.xml
+c:\users\uladzimir_huzaryk\documents\visual studio 2015\Projects\Angular\Angular\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+c:\users\uladzimir_huzaryk\documents\visual studio 2015\Projects\Angular\Angular\bin\Newtonsoft.Json.xml
+c:\users\uladzimir_huzaryk\documents\visual studio 2015\Projects\Angular\Angular\bin\System.Net.Http.Formatting.xml
+c:\users\uladzimir_huzaryk\documents\visual studio 2015\Projects\Angular\Angular\bin\System.Web.Http.xml
+c:\users\uladzimir_huzaryk\documents\visual studio 2015\Projects\Angular\Angular\bin\System.Web.Http.WebHost.xml
+c:\users\uladzimir_huzaryk\documents\visual studio 2015\Projects\Angular\Angular\bin\System.Web.Razor.xml
+c:\users\uladzimir_huzaryk\documents\visual studio 2015\Projects\Angular\Angular\bin\System.Web.Webpages.xml
+c:\users\uladzimir_huzaryk\documents\visual studio 2015\Projects\Angular\Angular\bin\System.Web.Webpages.Deployment.xml
+c:\users\uladzimir_huzaryk\documents\visual studio 2015\Projects\Angular\Angular\bin\System.Web.Webpages.Razor.xml
+c:\users\uladzimir_huzaryk\documents\visual studio 2015\Projects\Angular\Angular\bin\System.Web.Helpers.xml
+c:\users\uladzimir_huzaryk\documents\visual studio 2015\Projects\Angular\Angular\bin\System.Web.Mvc.xml
+c:\users\uladzimir_huzaryk\documents\visual studio 2015\Projects\Angular\Angular\obj\Debug\Angular.dll
+c:\users\uladzimir_huzaryk\documents\visual studio 2015\Projects\Angular\Angular\obj\Debug\Angular.pdb
+E:\EPAM\Angular\Angular\bin\ApplicationInsights.config
+E:\EPAM\Angular\Angular\bin\roslyn\csc.exe
+E:\EPAM\Angular\Angular\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\EPAM\Angular\Angular\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\EPAM\Angular\Angular\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\EPAM\Angular\Angular\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\EPAM\Angular\Angular\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\EPAM\Angular\Angular\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\EPAM\Angular\Angular\bin\roslyn\System.Collections.Immutable.dll
+E:\EPAM\Angular\Angular\bin\roslyn\System.Reflection.Metadata.dll
+E:\EPAM\Angular\Angular\bin\roslyn\vbc.exe
+E:\EPAM\Angular\Angular\bin\roslyn\VBCSCompiler.exe
+E:\EPAM\Angular\Angular\bin\roslyn\VBCSCompiler.exe.config
+E:\EPAM\Angular\Angular\bin\Angular.dll.config
+E:\EPAM\Angular\Angular\bin\Angular.dll
+E:\EPAM\Angular\Angular\bin\Angular.pdb
+E:\EPAM\Angular\Angular\bin\Microsoft.AI.Agent.Intercept.dll
+E:\EPAM\Angular\Angular\bin\Microsoft.AI.DependencyCollector.dll
+E:\EPAM\Angular\Angular\bin\Microsoft.AI.PerfCounterCollector.dll
+E:\EPAM\Angular\Angular\bin\Microsoft.AI.ServerTelemetryChannel.dll
+E:\EPAM\Angular\Angular\bin\Microsoft.AI.Web.dll
+E:\EPAM\Angular\Angular\bin\Microsoft.AI.WindowsServer.dll
+E:\EPAM\Angular\Angular\bin\Microsoft.ApplicationInsights.dll
+E:\EPAM\Angular\Angular\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\EPAM\Angular\Angular\bin\Microsoft.Web.Infrastructure.dll
+E:\EPAM\Angular\Angular\bin\Newtonsoft.Json.dll
+E:\EPAM\Angular\Angular\bin\System.Net.Http.Formatting.dll
+E:\EPAM\Angular\Angular\bin\System.Web.Helpers.dll
+E:\EPAM\Angular\Angular\bin\System.Web.Http.dll
+E:\EPAM\Angular\Angular\bin\System.Web.Http.WebHost.dll
+E:\EPAM\Angular\Angular\bin\System.Web.Mvc.dll
+E:\EPAM\Angular\Angular\bin\System.Web.Razor.dll
+E:\EPAM\Angular\Angular\bin\System.Web.Webpages.Deployment.dll
+E:\EPAM\Angular\Angular\bin\System.Web.Webpages.dll
+E:\EPAM\Angular\Angular\bin\System.Web.Webpages.Razor.dll
+E:\EPAM\Angular\Angular\bin\Microsoft.AI.DependencyCollector.xml
+E:\EPAM\Angular\Angular\bin\Microsoft.AI.ServerTelemetryChannel.xml
+E:\EPAM\Angular\Angular\bin\Microsoft.AI.Web.xml
+E:\EPAM\Angular\Angular\bin\Microsoft.AI.WindowsServer.xml
+E:\EPAM\Angular\Angular\bin\Microsoft.ApplicationInsights.xml
+E:\EPAM\Angular\Angular\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\EPAM\Angular\Angular\bin\Newtonsoft.Json.xml
+E:\EPAM\Angular\Angular\bin\System.Net.Http.Formatting.xml
+E:\EPAM\Angular\Angular\bin\System.Web.Http.xml
+E:\EPAM\Angular\Angular\bin\System.Web.Http.WebHost.xml
+E:\EPAM\Angular\Angular\bin\System.Web.Razor.xml
+E:\EPAM\Angular\Angular\bin\System.Web.Webpages.xml
+E:\EPAM\Angular\Angular\bin\System.Web.Webpages.Deployment.xml
+E:\EPAM\Angular\Angular\bin\System.Web.Webpages.Razor.xml
+E:\EPAM\Angular\Angular\bin\System.Web.Helpers.xml
+E:\EPAM\Angular\Angular\bin\System.Web.Mvc.xml
+E:\EPAM\Angular\Angular\obj\Debug\Angular.csprojResolveAssemblyReference.cache
+E:\EPAM\Angular\Angular\obj\Debug\Angular.dll
+E:\EPAM\Angular\Angular\obj\Debug\Angular.pdb
+C:\Users\Sacris\Desktop\Angular\Angular\bin\ApplicationInsights.config
+C:\Users\Sacris\Desktop\Angular\Angular\bin\roslyn\csc.exe
+C:\Users\Sacris\Desktop\Angular\Angular\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Sacris\Desktop\Angular\Angular\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Sacris\Desktop\Angular\Angular\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Sacris\Desktop\Angular\Angular\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Sacris\Desktop\Angular\Angular\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Sacris\Desktop\Angular\Angular\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Sacris\Desktop\Angular\Angular\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Sacris\Desktop\Angular\Angular\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Sacris\Desktop\Angular\Angular\bin\roslyn\vbc.exe
+C:\Users\Sacris\Desktop\Angular\Angular\bin\roslyn\VBCSCompiler.exe
+C:\Users\Sacris\Desktop\Angular\Angular\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Sacris\Desktop\Angular\Angular\bin\Angular.dll.config
+C:\Users\Sacris\Desktop\Angular\Angular\bin\Angular.dll
+C:\Users\Sacris\Desktop\Angular\Angular\bin\Angular.pdb
+C:\Users\Sacris\Desktop\Angular\Angular\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Sacris\Desktop\Angular\Angular\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Sacris\Desktop\Angular\Angular\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Sacris\Desktop\Angular\Angular\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Sacris\Desktop\Angular\Angular\bin\Microsoft.AI.Web.dll
+C:\Users\Sacris\Desktop\Angular\Angular\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Sacris\Desktop\Angular\Angular\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Sacris\Desktop\Angular\Angular\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Sacris\Desktop\Angular\Angular\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Sacris\Desktop\Angular\Angular\bin\Newtonsoft.Json.dll
+C:\Users\Sacris\Desktop\Angular\Angular\bin\System.Net.Http.Formatting.dll
+C:\Users\Sacris\Desktop\Angular\Angular\bin\System.Web.Helpers.dll
+C:\Users\Sacris\Desktop\Angular\Angular\bin\System.Web.Http.dll
+C:\Users\Sacris\Desktop\Angular\Angular\bin\System.Web.Http.WebHost.dll
+C:\Users\Sacris\Desktop\Angular\Angular\bin\System.Web.Mvc.dll
+C:\Users\Sacris\Desktop\Angular\Angular\bin\System.Web.Razor.dll
+C:\Users\Sacris\Desktop\Angular\Angular\bin\System.Web.Webpages.Deployment.dll
+C:\Users\Sacris\Desktop\Angular\Angular\bin\System.Web.Webpages.dll
+C:\Users\Sacris\Desktop\Angular\Angular\bin\System.Web.Webpages.Razor.dll
+C:\Users\Sacris\Desktop\Angular\Angular\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Sacris\Desktop\Angular\Angular\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Sacris\Desktop\Angular\Angular\bin\Microsoft.AI.Web.xml
+C:\Users\Sacris\Desktop\Angular\Angular\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Sacris\Desktop\Angular\Angular\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Sacris\Desktop\Angular\Angular\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Sacris\Desktop\Angular\Angular\bin\Newtonsoft.Json.xml
+C:\Users\Sacris\Desktop\Angular\Angular\bin\System.Net.Http.Formatting.xml
+C:\Users\Sacris\Desktop\Angular\Angular\bin\System.Web.Http.xml
+C:\Users\Sacris\Desktop\Angular\Angular\bin\System.Web.Http.WebHost.xml
+C:\Users\Sacris\Desktop\Angular\Angular\bin\System.Web.Razor.xml
+C:\Users\Sacris\Desktop\Angular\Angular\bin\System.Web.Webpages.xml
+C:\Users\Sacris\Desktop\Angular\Angular\bin\System.Web.Webpages.Deployment.xml
+C:\Users\Sacris\Desktop\Angular\Angular\bin\System.Web.Webpages.Razor.xml
+C:\Users\Sacris\Desktop\Angular\Angular\bin\System.Web.Helpers.xml
+C:\Users\Sacris\Desktop\Angular\Angular\bin\System.Web.Mvc.xml
+C:\Users\Sacris\Desktop\Angular\Angular\obj\Debug\Angular.csprojResolveAssemblyReference.cache
+C:\Users\Sacris\Desktop\Angular\Angular\obj\Debug\Angular.dll
+C:\Users\Sacris\Desktop\Angular\Angular\obj\Debug\Angular.pdb
+C:\Users\Sacris\Desktop\Angular\Angular\bin\BLL.Interfaces.dll
+C:\Users\Sacris\Desktop\Angular\Angular\bin\DependencyResolver.dll
+C:\Users\Sacris\Desktop\Angular\Angular\bin\Ninject.dll
+C:\Users\Sacris\Desktop\Angular\Angular\bin\DAL.Interfaces.dll
+C:\Users\Sacris\Desktop\Angular\Angular\bin\DAL.dll
+C:\Users\Sacris\Desktop\Angular\Angular\bin\Ninject.Web.Common.dll
+C:\Users\Sacris\Desktop\Angular\Angular\bin\EntityFramework.dll
+C:\Users\Sacris\Desktop\Angular\Angular\bin\ORM.dll
+C:\Users\Sacris\Desktop\Angular\Angular\bin\BLL.dll
+C:\Users\Sacris\Desktop\Angular\Angular\bin\BLL.Interfaces.pdb
+C:\Users\Sacris\Desktop\Angular\Angular\bin\DependencyResolver.pdb
+C:\Users\Sacris\Desktop\Angular\Angular\bin\Ninject.xml
+C:\Users\Sacris\Desktop\Angular\Angular\bin\DAL.Interfaces.pdb
+C:\Users\Sacris\Desktop\Angular\Angular\bin\DAL.pdb
+C:\Users\Sacris\Desktop\Angular\Angular\bin\Ninject.Web.Common.xml
+C:\Users\Sacris\Desktop\Angular\Angular\bin\EntityFramework.xml
+C:\Users\Sacris\Desktop\Angular\Angular\bin\ORM.pdb
+C:\Users\Sacris\Desktop\Angular\Angular\bin\BLL.pdb
+C:\Users\Sacris\Desktop\Angular\Angular\bin\ru\EntityFramework.resources.dll
+C:\Users\Sacris\Desktop\Angular\Angular\bin\Ninject.Web.Mvc.dll
+C:\Users\Sacris\Desktop\Angular\Angular\bin\WebActivatorEx.dll
+C:\Users\Sacris\Desktop\Angular\Angular\bin\Ninject.Web.Mvc.xml

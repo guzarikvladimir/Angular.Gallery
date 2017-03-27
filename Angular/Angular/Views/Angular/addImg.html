@@ -1,0 +1,30 @@
+﻿<div class="content">
+    <p class="message"></p>
+    <div class="adding-form">
+        <p>
+            <input type="file" fileread="img.data" required />
+        </p>
+        <p>
+            <input type="text" ng-model="img.name" placeholder="Input image name..." required />
+        </p>
+        <p>
+            <textarea ng-model="img.description" rows="2" placeholder="Input image description..."></textarea>
+        </p>
+        <p>
+            <select ng-model="albums.selected"
+                    ng-options="option.name for option in albums.available track by option.id"></select>
+        </p>
+        <p>
+            <label>Is tradable:<input type="checkbox" ng-model="img.isTradable" /></label>
+        </p>
+        <p>
+            <input type="button" value="add" ng-click="add()" />
+        </p>
+    </div>
+    <div class="preview-area">
+        <div class="preview">
+            <div ng-bind="img.name"></div>
+            <img src="{{img.data}}" />
+        </div>
+    </div>
+</div>
