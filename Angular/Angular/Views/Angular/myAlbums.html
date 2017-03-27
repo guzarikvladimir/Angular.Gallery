@@ -1,8 +1,8 @@
 ﻿<div>
     <div class="filter">
-        <select ng-model="albums.selected"
+        <select ng-model="albums.selected" ng-change="getImages()"
                 ng-options="option.name for option in albums.available track by option.id"></select>
-        <button ng-clcik="getImages()">Show</button>
+        <!--<button ng-clcik="getImages()">Show</button>-->
     </div>
     <div ng-repeat="img in data" class="repeat">
         <input type="checkbox" class="invisible" id="{{img.Name}}" />
