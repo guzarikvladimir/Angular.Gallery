@@ -59,8 +59,8 @@
             $locationProvider.html5Mode(true);
         }
     ])
-.factory('AuthHttpResponseInterceptor', ["$q", "$location", "$rootScope",
-    function ($q, $location, $rootScope) {
+.factory('AuthHttpResponseInterceptor', ["$q", "$location",
+    function ($q, $location) {
         return {
             response: function (response) {
 
@@ -121,8 +121,8 @@
             });
         };
     }])
-.controller('LoginController', ["$scope", "$routeParams", "$location", "$rootScope", "loginService", "authService",
-    function ($scope, $routeParams, $location, $rootScope, loginService, authService) {
+.controller('LoginController', ["$scope", "$routeParams", "$location", "loginService", "authService", "rootService",
+    function ($scope, $routeParams, $location, loginService, authService, rootService) {
         $scope.loginForm = {
             emailAddress: '',
             password: '',
@@ -131,25 +131,23 @@
             role: ''
         };
 
-        var data = authService.getCredentials();
-        if (!!data.userEmail) {
-            $rootScope.loggedIn = true;
-            $rootScope.email = data.userEmail;
-            $rootScope.role = data.role;
-            $rootScope.id = data.userId;
-        };
-        $scope.loginForm.emailAddress = $rootScope.email;
-        $scope.loginForm.role = $rootScope.role;
-        $scope.loginForm.loggedIn = $rootScope.loggedIn;
+        function greeting() {
+            var data = authService.getCredentials();
+            if (!!data.userEmail) {
+                rootService.setRoots(data.userEmail, data.role, data.userId);
+            };
+            $scope.loginForm.emailAddress = rootService.getRoots().email;
+            $scope.loginForm.role = rootService.getRoots().role;
+            $scope.loginForm.loggedIn = rootService.getRoots().loggedIn;
+        }
+
+        greeting();
 
         $scope.login = function () {
             loginService.login($scope.loginForm.emailAddress, $scope.loginForm.password)
                 .then(function (result) {
                     $scope.loginForm.loggedIn = true;
-                    $rootScope.loggedIn = true;
-                    $rootScope.email = result.data.Email;
-                    $rootScope.role = result.data.Role;
-                    $rootScope.id = result.data.Id;
+                    rootService.setRoots(result.data.userEmail, result.data.role, result.data.userId);
                     authService.setCredentials(
                         result.data.Id,
                         result.data.Email,
@@ -162,28 +160,48 @@
                         $location.path($scope.loginForm.returnUrl);
                     }
                 },
-                    function () {
-                        $scope.loginForm.loggedIn = false;
-                        $scope.loginForm.emailAddress = '';
-                        $rootScope.loggedIn = false;
-                        $rootScope.email = '';
-                        $rootScope.role = '';
-                        $rootScope.id = '';
-                    });
+                function () {
+                    $scope.loginForm.loggedIn = false;
+                    $scope.loginForm.emailAddress = '';
+                    rootService.removeRoots();
+                });
         };
 
         $scope.logout = function () {
             authService.clearCredentials();
             $scope.loginForm.loggedIn = false;
+            rootService.removeRoots();
+            $location.path('/');
+        }
+    }])
+.service("rootService", ["$rootScope", function($rootScope) {
+        function setRoots(email, role, id) {
+            $rootScope.loggedIn = true;
+            $rootScope.email = email;
+            $rootScope.role = role;
+            $rootScope.id = id;
+        };
+
+        function getRoots() {
+            return {
+                email: $rootScope.email,
+                role: $rootScope.role,
+                loggedIn: $rootScope.loggedIn
+            }
+        }
+
+        function removeRoots() {
             $rootScope.loggedIn = false;
             $rootScope.email = '';
             $rootScope.role = '';
             $rootScope.id = '';
-            $location.path('/');
+        };
+
+        return {
+            setRoots: setRoots,
+            removeRoots: removeRoots,
+            getRoots: getRoots
         }
-    }])
-.service("rootService", [function() {
-        
     }])
 .service("authService", ["$cookies", function ($cookies) {
     function setCredentials(id, email, password, roleId, role) {
@@ -306,17 +324,17 @@
 
     $scope.add = function () {
         dataCenter.add($scope.img.name, $scope.img.data, $scope.img.description, $scope.albums.selected.id, $scope.img.isTradable)
-            .then(function (response) {
+            .then(function () {
                 $scope.img.name = "";
                 $scope.img.data = "";
                 $scope.img.description = "";
             });
     };
 }])
-.controller("TextController", ["$scope", "$rootScope", function ($scope, $rootScope) {
-    $scope.text = "The site presents a gallery on the theme of interior design. " +
-        "Interior Design is the definitive resource for interior designers, architects and other design pros, featuring groundbreaking projects, innovative new products, ...";
+.controller("TextController", ["$scope", "$rootScope", "dataCenter",
+    function ($scope, $rootScope, dataCenter) {
     $scope.isEdit = false;
+    $scope.text = "The site presents a gallery on the theme of interior design. Interior Design is the definitive resource for interior designers, architects and other design pros, featuring groundbreaking projects, innovative new products, ...";
 
     $scope.goEdit = function () {
         if ($rootScope.role === 'Admin') {
@@ -399,13 +417,21 @@
         return respons;
     };
 
+    function getDescription() {
+        var respons = $http({
+            url: 'http://localhost:54287/Image/GetDescription'
+        });
+        return respons;
+    }
+
     return {
         getAll: getAll,
         add: add,
         remove: remove,
         getAlbumsForCurrentUser: getAlbumsForCurrentUser,
         createAlbum: createAlbum,
-        getImagesForAlbum: getImagesForAlbum
+        getImagesForAlbum: getImagesForAlbum,
+        getDescription: getDescription
     }
 }])
 .directive("fileread", [function () {

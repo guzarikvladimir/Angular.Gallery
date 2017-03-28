@@ -8,6 +8,7 @@ using System.Web.Mvc;
 using Angular.Infrastructure;
 using BLL.Interfaces.Entities;
 using BLL.Interfaces.Services;
+using Newtonsoft.Json;
 
 namespace Angular.Controllers
 {
@@ -127,5 +128,18 @@ namespace Angular.Controllers
 
             return image;
         }
+
+        //public JsonResult GetDescription()
+        //{
+        //    var path = Path.Combine(Server.MapPath("~"), "Content", "json", "description.json");
+        //    var description = new { text = "" };
+        //    string json;
+        //    using (StreamReader file = System.IO.File.OpenText(path))
+        //    {
+        //        json = file.ReadToEnd();
+        //    }
+        //    JsonConvert.DeserializeAnonymousType(json, description);
+        //    return Json(json);
+        //}
     }
 }
