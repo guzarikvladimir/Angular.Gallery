@@ -326,6 +326,14 @@ input[type="checkbox"]:checked ~ .grid {
 }
 .greeting {
     float: right;
+    padding: 10px 10px;
+}
+.greeting h5 {
+    padding: 0 0 5px 0;
+    margin: 0;
+}
+.greeting button {
+    float: right;
 }
 /*login*/
 
@@ -381,4 +389,14 @@ input[type="checkbox"]:checked ~ .grid {
 
 .repeat {
     display: inline;
+}
+
+.small {
+    display: block;
+    font-size: 11px;
+    color: navy;
+}
+
+.filter {
+    text-align: center;
 }

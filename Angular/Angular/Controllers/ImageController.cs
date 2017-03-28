@@ -63,6 +63,18 @@ namespace Angular.Controllers
 
         public JsonResult AddImageAjax(string fileName, string data, string description, int albumId, bool isTradable)
         {
+            int index = fileName.LastIndexOf(".", StringComparison.Ordinal);
+            string extension;
+            if (index != -1)
+            {
+                extension = fileName.Substring(index + 1);
+            }
+            else
+            {
+                fileName += ".jpeg";
+                extension = "jpeg";
+            }
+
             var dataIndex = data.IndexOf("base64", StringComparison.Ordinal) + 7;
             var cleareData = data.Substring(dataIndex);
             var fileData = Convert.FromBase64String(cleareData);
@@ -75,7 +87,6 @@ namespace Angular.Controllers
                 fileStream.Close();
             }
 
-            var extension = fileName.Substring(fileName.LastIndexOf(".", StringComparison.Ordinal) + 1);
             var ex = extensionService.GetByName(extension);
             if (ex == null)
             {
