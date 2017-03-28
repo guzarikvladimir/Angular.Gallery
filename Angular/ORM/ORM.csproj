@@ -62,7 +62,7 @@
     <Compile Include="Album.cs" />
     <Compile Include="Extension.cs" />
     <Compile Include="Image.cs" />
-    <Compile Include="interiordesigndbContext.cs" />
+    <Compile Include="interiordesignContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Role.cs" />
     <Compile Include="User.cs" />

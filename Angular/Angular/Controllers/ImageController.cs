@@ -32,7 +32,8 @@ namespace Angular.Controllers
                 Description = image.Description,
                 AlbumId = image.AlbumId,
                 ExtensionId = image.ExtensionId,
-                Url = Path.Combine("\\Content", "img", image.Name)
+                Url = Path.Combine("\\Content", "img", image.Name),
+                CreationDate = image.CreationDate
             }), JsonRequestBehavior.AllowGet);
         }
 
@@ -57,7 +58,8 @@ namespace Angular.Controllers
                 Description = image.Description,
                 AlbumId = image.AlbumId,
                 ExtensionId = image.ExtensionId,
-                Url = Path.Combine("\\Content", "img", image.Name)
+                Url = Path.Combine("\\Content", "img", image.Name),
+                CreationDate = image.CreationDate
             }));
         }
 
@@ -101,7 +103,8 @@ namespace Angular.Controllers
                 Description = description,
                 ExtensionId = extensionService.GetByName(extension).Id,
                 AlbumId = albumId,
-                IsTradable = isTradable
+                IsTradable = isTradable,
+                CreationDate = DateTime.Now
             });
 
             return Json(true, JsonRequestBehavior.AllowGet);

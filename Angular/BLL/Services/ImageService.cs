@@ -27,7 +27,8 @@ namespace BLL.Services
                 Description = image.Description,
                 AlbumId = image.AlbumId,
                 ExtensionId = image.ExtensionId,
-                IsTradable = image.IsTradable
+                IsTradable = image.IsTradable,
+                CreationDate = image.CreationDate
             }).ToList();
         }
 
@@ -41,7 +42,8 @@ namespace BLL.Services
                 Description = image.Description,
                 AlbumId = image.AlbumId,
                 ExtensionId = image.ExtensionId,
-                IsTradable = image.IsTradable
+                IsTradable = image.IsTradable,
+                CreationDate = image.CreationDate
             };
         }
 
@@ -55,7 +57,8 @@ namespace BLL.Services
                 Description = image.Description,
                 AlbumId = image.AlbumId,
                 ExtensionId = image.ExtensionId,
-                IsTradable = image.IsTradable
+                IsTradable = image.IsTradable,
+                CreationDate = image.CreationDate
             }).ToList();
         }
 
@@ -69,7 +72,8 @@ namespace BLL.Services
                 Description = image.Description,
                 AlbumId = image.AlbumId,
                 ExtensionId = image.ExtensionId,
-                IsTradable = image.IsTradable
+                IsTradable = image.IsTradable,
+                CreationDate = image.CreationDate
             }).ToList();
         }
 
@@ -81,7 +85,8 @@ namespace BLL.Services
                 Description = image.Description,
                 AlbumId = image.AlbumId,
                 ExtensionId = image.ExtensionId,
-                IsTradable = image.IsTradable
+                IsTradable = image.IsTradable,
+                CreationDate = image.CreationDate
             });
             uow.Commit();
         }

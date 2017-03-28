@@ -21,6 +21,9 @@ namespace ORM
 
         public bool? isTradable { get; set; }
 
+        [Column(TypeName = "date")]
+        public DateTime? CreationDate { get; set; }
+
         public virtual Album Album { get; set; }
 
         public virtual Extension Extension { get; set; }

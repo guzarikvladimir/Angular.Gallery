@@ -26,12 +26,12 @@ namespace DependencyResolver
             if (isWeb)
             {
                 kernel.Bind<IUnitOfWork>().To<UnitOfWork>().InRequestScope();
-                kernel.Bind<DbContext>().To<interiordesigndbContext>().InRequestScope();
+                kernel.Bind<DbContext>().To<interiordesignContext>().InRequestScope();
             }
             else
             {
                 kernel.Bind<IUnitOfWork>().To<UnitOfWork>().InSingletonScope();
-                kernel.Bind<DbContext>().To<interiordesigndbContext>().InSingletonScope();
+                kernel.Bind<DbContext>().To<interiordesignContext>().InSingletonScope();
             }
 
             kernel.Bind<IRoleService>().To<RoleService>();

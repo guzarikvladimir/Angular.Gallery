@@ -1,4 +1,6 @@
-﻿namespace DAL.Interfaces.DTO
+﻿using System;
+
+namespace DAL.Interfaces.DTO
 {
     public class DalImage : IEntity
     {
@@ -8,6 +10,7 @@
         public int AlbumId { get; set; }
         public int ExtensionId { get; set; }
         public bool IsTradable { get; set; }
+        public DateTime? CreationDate { get; set; }
 
 
         public DalExtension Extension { get; set; }

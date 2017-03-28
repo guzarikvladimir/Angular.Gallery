@@ -13,5 +13,6 @@ namespace Angular.Models
         public string Url { get; set; }
         public int AlbumId { get; set; }
         public int ExtensionId { get; set; }
+        public DateTime? CreationDate { get; set; }
     }
 }

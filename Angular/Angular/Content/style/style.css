@@ -191,6 +191,7 @@ ul li:hover .dropOut { opacity: 1; margin-top: 8px; }
 
 label[for] {
     cursor: pointer;
+    text-align: center;
 }
 
 .invisible {

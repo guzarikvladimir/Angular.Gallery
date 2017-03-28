@@ -26,7 +26,8 @@ namespace DAL.Concrete
                 Description = image.Description,
                 AlbumId = image.AlbumId,
                 ExtensionId = image.ExtensionId,
-                IsTradable = image.isTradable.Value
+                IsTradable = image.isTradable.Value,
+                CreationDate = image.CreationDate.Value
             });
         }
 
@@ -40,7 +41,8 @@ namespace DAL.Concrete
                 Description = image.Description,
                 AlbumId = image.AlbumId,
                 ExtensionId = image.ExtensionId,
-                IsTradable = image.isTradable.Value
+                IsTradable = image.isTradable.Value,
+                CreationDate = image.CreationDate.Value
             };
         }
 
@@ -53,7 +55,8 @@ namespace DAL.Concrete
                 Description = image.Description,
                 AlbumId = image.AlbumId,
                 ExtensionId = image.ExtensionId,
-                IsTradable = image.isTradable.Value
+                IsTradable = image.isTradable.Value,
+                CreationDate = image.CreationDate.Value
             });
         }
 
@@ -66,7 +69,8 @@ namespace DAL.Concrete
                 Description = image.Description,
                 AlbumId = image.AlbumId,
                 ExtensionId = image.ExtensionId,
-                IsTradable = image.isTradable.Value
+                IsTradable = image.isTradable.Value,
+                CreationDate = image.CreationDate.Value
             });
         }
 
@@ -78,7 +82,8 @@ namespace DAL.Concrete
                 Description = e.Description,
                 AlbumId = e.AlbumId,
                 ExtensionId = e.ExtensionId,
-                isTradable = e.IsTradable
+                isTradable = e.IsTradable,
+                CreationDate = e.CreationDate
             });
         }
 
