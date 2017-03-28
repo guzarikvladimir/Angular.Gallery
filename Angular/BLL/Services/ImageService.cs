@@ -22,6 +22,7 @@ namespace BLL.Services
         {
             return imageRepository?.GetAll().Select(image => new ImageEntity()
             {
+                Id = image.Id,
                 Name = image.Name,
                 Description = image.Description,
                 AlbumId = image.AlbumId,
@@ -30,9 +31,18 @@ namespace BLL.Services
             }).ToList();
         }
 
-        public ImageEntity GetById()
+        public ImageEntity GetById(int id)
         {
-            throw new System.NotImplementedException();
+            var image = imageRepository?.GetById(id);
+            return image == null ? null : new ImageEntity()
+            {
+                Id = image.Id,
+                Name = image.Name,
+                Description = image.Description,
+                AlbumId = image.AlbumId,
+                ExtensionId = image.ExtensionId,
+                IsTradable = image.IsTradable
+            };
         }
 
         public List<ImageEntity> GetByUserId(int key)
@@ -40,6 +50,7 @@ namespace BLL.Services
             var images = imageRepository.GetByUserId(key);
             return images?.Select(image => new ImageEntity()
             {
+                Id = image.Id,
                 Name = image.Name,
                 Description = image.Description,
                 AlbumId = image.AlbumId,
@@ -53,6 +64,7 @@ namespace BLL.Services
             var images = imageRepository.GetByAlbumUserId(albumId, userId);
             return images?.Select(image => new ImageEntity()
             {
+                Id = image.Id,
                 Name = image.Name,
                 Description = image.Description,
                 AlbumId = image.AlbumId,
@@ -76,7 +88,11 @@ namespace BLL.Services
 
         public void Delete(ImageEntity image)
         {
-            throw new System.NotImplementedException();
+            imageRepository.Delete(new DalImage()
+            {
+                Id = image.Id
+            });
+            uow.Commit();
         }
 
         public void Update(ImageEntity image)

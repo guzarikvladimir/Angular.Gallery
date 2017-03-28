@@ -21,6 +21,7 @@ namespace DAL.Concrete
         {
             return context.Set<Image>().Select(image => new DalImage()
             {
+                Id = image.Id,
                 Name = image.Name,
                 Description = image.Description,
                 AlbumId = image.AlbumId,
@@ -31,13 +32,23 @@ namespace DAL.Concrete
 
         public DalImage GetById(int key)
         {
-            throw new NotImplementedException();
+            var image = context.Set<Image>().FirstOrDefault(img => img.Id == key);
+            return image == null ? null : new DalImage()
+            {
+                Id = image.Id,
+                Name = image.Name,
+                Description = image.Description,
+                AlbumId = image.AlbumId,
+                ExtensionId = image.ExtensionId,
+                IsTradable = image.isTradable.Value
+            };
         }
 
         public IEnumerable<DalImage> GetByUserId(int key)
         {
             return context.Set<Image>().Where(image => image.Album.UserId == key).Select(image => new DalImage()
             {
+                Id = image.Id,
                 Name = image.Name,
                 Description = image.Description,
                 AlbumId = image.AlbumId,
@@ -50,6 +61,7 @@ namespace DAL.Concrete
         {
             return context.Set<Image>().Where(image => image.AlbumId == albumId && image.Album.UserId == userId).Select(image => new DalImage()
             {
+                Id = image.Id,
                 Name = image.Name,
                 Description = image.Description,
                 AlbumId = image.AlbumId,
@@ -72,7 +84,11 @@ namespace DAL.Concrete
 
         public void Delete(DalImage e)
         {
-            throw new NotImplementedException();
+            var image = context.Set<Image>().FirstOrDefault(img => img.Id == e.Id);
+            if (image != null)
+            {
+                context.Set<Image>().Remove(image);
+            }
         }
 
         public void Update(DalImage e)

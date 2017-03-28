@@ -379,3 +379,6 @@ input[type="checkbox"]:checked ~ .grid {
     color: greenyellow;
 }
 
+.repeat {
+    display: inline;
+}

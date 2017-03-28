@@ -92,6 +92,12 @@
                     });
         };
 
+        $scope.remove = function (id) {
+            dataCenter.remove(id).then(function () {
+                $scope.getImages();
+            });
+        };
+
         function getAlbums() {
             dataCenter.getAlbumsForCurrentUser().then(function (respons) {
                 $scope.albums.available = respons.data;
@@ -107,8 +113,10 @@
         $scope.create = function () {
             dataCenter.createAlbum($scope.albumName)
             .then(function () {
+                $scope.albumName = '';
                 alert("The album has been created!");
             }, function () {
+                $scope.albumName = '';
                 alert("There was an error during creating the album");
             });
         };
@@ -173,6 +181,9 @@
             $rootScope.id = '';
             $location.path('/');
         }
+    }])
+.service("rootService", [function() {
+        
     }])
 .service("authService", ["$cookies", function ($cookies) {
     function setCredentials(id, email, password, roleId, role) {
@@ -268,25 +279,9 @@
     }])
 .controller("GalleryController", ["$scope", "dataCenter", "$http",
     function ($scope, dataCenter) {
-        $scope.filter = false;
-
         $scope.albums = {
             available: [],
             selected: {}
-        };
-
-        $scope.toggleFilter = function () {
-            dataCenter.getAlbumsForCurrentUser().then(function (respons) {
-                $scope.albums.available = respons.data;
-                $scope.albums.selected = $scope.albums.available[0];
-            });
-            $scope.filter = !$scope.filter;
-        }
-
-        $scope.remove = function (url) {
-            dataCenter.remove(url).then(function () {
-                getAll();
-            });
         };
 
         function getAll() {
@@ -305,6 +300,7 @@
 
     dataCenter.getAlbumsForCurrentUser().then(function (respons) {
         $scope.albums.available = respons.data;
+        $scope.albums.available.splice(0, 1);
         $scope.albums.selected = $scope.albums.available[0];
     });
 
@@ -356,11 +352,11 @@
         return respons;
     };
 
-    function remove(url) {
+    function remove(id) {
         return $http({
             method: "POST",
             url: 'http://localhost:54287/Image/DeleteFileAjax',
-            data: { url: url },
+            data: { id: id },
             headers: { 'Accept': 'application/json' }
         });
     };

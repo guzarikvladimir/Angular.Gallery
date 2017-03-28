@@ -36,10 +36,12 @@ namespace Angular.Controllers
             }), JsonRequestBehavior.AllowGet);
         }
 
-        public JsonResult DeleteFileAjax(string url)
+        public JsonResult DeleteFileAjax(int id)
         {
-            var path = Server.MapPath(url);
+            var image = imageService.GetById(id);
+            var path = GetPathToImg(image.Name);
             System.IO.File.Delete(path);
+            imageService.Delete(image);
             return Json(true);
         }
 

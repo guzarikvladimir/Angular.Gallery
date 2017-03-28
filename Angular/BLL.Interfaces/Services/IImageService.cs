@@ -7,7 +7,7 @@ namespace BLL.Interfaces.Services
     public interface IImageService
     {
         List<ImageEntity> GetAll();
-        ImageEntity GetById();
+        ImageEntity GetById(int id);
         List<ImageEntity> GetByUserId(int key);
         List<ImageEntity> GetByAlbumUserId(int albumId, int userId);
         void Create(ImageEntity image);
