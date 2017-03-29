@@ -430,3 +430,7 @@ input[type="checkbox"]:checked ~ .grid {
 .filter {
     text-align: center;
 }
+
+#spinner {
+    position: absolute;
+}
