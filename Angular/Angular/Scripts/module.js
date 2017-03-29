@@ -51,6 +51,18 @@
                         }
                     }
                 })
+                .when('/Angular/cart',
+                {
+                    templateUrl: '/views/Angular/cart.html',
+                    controller: 'CartController',
+                    resolve: {
+                        "check": function ($location, $rootScope) {
+                            if (!$rootScope.loggedIn) {
+                                $location.path('/');
+                            }
+                        }
+                    }
+                })
                 .otherwise({
                     redirectTo: '/Angular/gallery'
                 });
@@ -306,13 +318,19 @@
             selected: {}
         };
 
-        $scope.clearClassFull = function ($index) {
+        $scope.clearClassFull = function($index) {
             var images = $scope.data;
             for (var i = 0; i < images.length; i++) {
                 if (i !== $index) {
                     images[i].isPrew = false;
                 }
             }
+        };
+
+        $scope.addToCart = function (img) {
+            dataCenter.addToCart(img).then(function() {
+                getAll();
+            });
         }
 
         function getAll() {
@@ -350,6 +368,7 @@
                 $scope.img.name = "";
                 $scope.img.data = "";
                 $scope.img.description = "";
+                $scope.img.price = "";
             });
     };
 }])
@@ -368,6 +387,34 @@
         $scope.isEdit = false;
     }
 }])
+.controller("CartController", ["$scope", "dataCenter",
+    function ($scope, dataCenter) {
+        function getCart() {
+            dataCenter.getCart().then(function(respons) {
+                $scope.data = respons.data;
+                $scope.sum = getSum();
+            });
+        };
+
+        getCart();
+
+        function getSum() {
+            var sum = 0;
+            for (var i = 0; i < $scope.data.length; i++) {
+                sum += $scope.data[i].Price;
+            }
+            return sum;
+        };
+
+        $scope.clearClassFull = function ($index) {
+            var images = $scope.data;
+            for (var i = 0; i < images.length; i++) {
+                if (i !== $index) {
+                    images[i].isPrew = false;
+                }
+            }
+        };
+    }])
 .service("dataCenter", ["$http", "$rootScope", function ($http, $rootScope) {
     function getAll() {
         var respons = $http({
@@ -376,7 +423,7 @@
         return respons;
     };
 
-    function add(fileName, data, description, albumId, isTradable) {
+    function add(fileName, data, description, albumId, isTradable, price) {
         var respons = $http({
             method: "POST",
             url: 'http://localhost:54287/Image/AddImageAjax',
@@ -385,7 +432,8 @@
                 data: data,
                 description: description,
                 albumId: albumId,
-                isTradable: isTradable === undefined ? false : true
+                isTradable: isTradable === undefined ? false : true,
+                price: price
             },
             headers: { 'Accept': 'application/json' }
         });
@@ -446,16 +494,41 @@
         return respons;
     };
 
-    var cart = [];
+    //var cart = [];
+
+    //function addToCart(img) {
+    //    cart.push(img);
+    //}
+    //function removeFormCart($index) {
+    //    cart.slice($index, 1);
+    //}
+    //function getCart() {
+    //    return cart;
+    //}
 
     function addToCart(img) {
-        cart.push(img);
+        var respons = $http({
+            method: "POST",
+            url: 'http://localhost:54287/Image/AddToCart',
+            data: {
+                imageId: img.Id,
+                userId: $rootScope.id
+            },
+            headers: { 'Accept': 'application/json' }
+        });
+        return respons;
     }
-    function removeFormCart($index) {
-        cart.slice($index, 1);
-    }
+
     function getCart() {
-        return cart;
+        var respons = $http({
+            method: "POST",
+            url: 'http://localhost:54287/Image/GetCart',
+            data: {
+                userId: $rootScope.id
+            },
+            headers: { 'Accept': 'application/json' }
+        });
+        return respons;
     }
 
     return {
@@ -467,7 +540,7 @@
         getImagesForAlbum: getImagesForAlbum,
         getDescription: getDescription,
         addToCart: addToCart,
-        removeFormCart: removeFormCart,
+        //removeFormCart: removeFormCart,
         getCart: getCart
     }
 }])

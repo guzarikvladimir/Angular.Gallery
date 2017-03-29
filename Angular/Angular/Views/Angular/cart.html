@@ -1,0 +1,17 @@
+﻿<div>
+    <h1>Cart: {{sum}}</h1>
+    <div class="container">
+        <div ng-repeat="img in data" class="prev" ng-class="{full:img.isPrew, prev:!img.isPrew}">
+            <h4 class="image-name" ng-show="img.isPrew">{{img.Name}}</h4>
+            <div class="imgWrapper">
+                <img src="{{img.Url}}" ng-click="clearClassFull($index); img.isPrew = !img.isPrew" />
+                <div class="description" ng-show="img.isPrew">
+                    <h5>Description:</h5>
+                    {{img.Description}}
+                    <h5>Price: {{img.Price}}$</h5>
+                </div>
+            </div>
+            <h5 class="image-date" ng-show="img.isPrew">{{img.CreationDate | date:'dd-M-yyyy'}}</h5>
+        </div>
+    </div>
+</div>

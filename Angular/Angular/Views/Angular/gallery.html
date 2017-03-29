@@ -9,8 +9,10 @@
                     <h5>Description:</h5>
                     {{img.Description}}
                     <div ng-show="img.IsTradable">
-                        <h5>Price: {{img.Price}}$</h5>
-                        <button ng-click="addToCart(img)">Buy</button>
+                        <div ng-hide="img.IsBought">
+                            <h5>Price: {{img.Price}}$</h5>
+                            <button ng-click="addToCart(img)">Buy</button>
+                        </div>
                     </div>
                 </div>
             </div>

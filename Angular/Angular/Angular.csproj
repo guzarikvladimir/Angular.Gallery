@@ -180,6 +180,7 @@
     <Content Include="Scripts\jquery-3.1.1.slim.min.js" />
     <Content Include="Scripts\module.js" />
     <Content Include="Views\Angular\addImg.html" />
+    <Content Include="Views\Angular\cart.html" />
     <Content Include="Views\Angular\createAlbum.html" />
     <Content Include="Views\Angular\gallery.html" />
     <Content Include="Views\Angular\home.html" />

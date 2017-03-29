@@ -23,6 +23,34 @@ namespace Angular.Controllers
             this.extensionService = extensionService;
         }
 
+        public JsonResult AddToCart(int imageId, int userId)
+        {
+            var image = imageService.GetById(imageId);
+            image.UserId = userId;
+            image.IsBought = true;
+            imageService.Update(image);
+            return Json(true);
+        }
+
+        public JsonResult GetCart(int userId)
+        {
+            var images = imageService.GetAll().Where(img => img.UserId == userId);
+            return Json(images.Select(image => new Image()
+            {
+                Id = image.Id,
+                Name = image.Name,
+                Description = image.Description,
+                AlbumId = image.AlbumId,
+                ExtensionId = image.ExtensionId,
+                Url = Path.Combine("\\Content", "img", image.Name),
+                CreationDate = image.CreationDate?.ToUniversalTime().Subtract(new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc)).TotalMilliseconds,
+                IsBought = image.IsBought,
+                UserId = image.UserId,
+                Price = image.Price,
+                IsTradable = image.IsTradable
+            }), JsonRequestBehavior.AllowGet);
+        }
+
         public JsonResult GetImages()
         {
             var images = imageService.GetAll();
@@ -72,7 +100,7 @@ namespace Angular.Controllers
             }));
         }
 
-        public JsonResult AddImageAjax(string fileName, string data, string description, int albumId, bool isTradable)
+        public JsonResult AddImageAjax(string fileName, string data, string description, int albumId, bool isTradable, int? price)
         {
             int index = fileName.LastIndexOf(".", StringComparison.Ordinal);
             string extension;
@@ -116,7 +144,7 @@ namespace Angular.Controllers
                 CreationDate = DateTime.Now,
                 IsBought = false,
                 UserId = null,
-                Price = null
+                Price = price
             });
 
             return Json(true, JsonRequestBehavior.AllowGet);
