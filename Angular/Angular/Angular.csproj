@@ -158,6 +158,9 @@
     <Content Include="Content\background\303efm1.png" />
     <Content Include="Content\background\bj0nm.png" />
     <Content Include="Content\background\Dizayn-interera.jpg" />
+    <Content Include="Content\background\progressbar_cat.gif" />
+    <Content Include="Content\background\spinner.gif" />
+    <Content Include="Content\background\spinner2.gif" />
     <Content Include="Content\ico\favicon.ico" />
     <Content Include="Content\style\style.css" />
     <Content Include="Global.asax" />

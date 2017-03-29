@@ -62,8 +62,12 @@
 .factory('AuthHttpResponseInterceptor', ["$q", "$location",
     function ($q, $location) {
         return {
+            request: function (request) {
+                $("#spinner").show();
+                return request;
+            },
             response: function (response) {
-
+                $("#spinner").hide();
                 if (response.status === 401) {
                     console.log("Response 401");
                 };
@@ -147,7 +151,7 @@
             loginService.login($scope.loginForm.emailAddress, $scope.loginForm.password)
                 .then(function (result) {
                     $scope.loginForm.loggedIn = true;
-                    rootService.setRoots(result.data.userEmail, result.data.role, result.data.userId);
+                    rootService.setRoots(result.data.Email, result.data.Role, result.data.Id);
                     authService.setCredentials(
                         result.data.Id,
                         result.data.Email,
@@ -301,6 +305,15 @@
             available: [],
             selected: {}
         };
+
+        $scope.clearClassFull = function ($index) {
+            var images = $scope.data;
+            for (var i = 0; i < images.length; i++) {
+                if (i !== $index) {
+                    images[i].isPrew = false;
+                }
+            }
+        }
 
         function getAll() {
             dataCenter.getAll().then(function (response) {

@@ -2,15 +2,17 @@
     <div class="filter">
         <select ng-model="albums.selected" ng-change="getImages()"
                 ng-options="option.name for option in albums.available track by option.id"></select>
-        <!--<button ng-clcik="getImages()">Show</button>-->
     </div>
-    <div ng-repeat="img in data" class="repeat">
-        <input type="checkbox" class="invisible" id="{{img.Name}}" />
-        <label for="{{img.Name}}" class="lightbox"><img src="{{img.Url}}" /></label>
-    </div>
-    <div class="grid">
-        <div ng-repeat="img in data" class="repeat">
-            <label for="{{img.Name}}" class="grid-item"><span class="closebtn" ng-click="remove(img.Id)">&times;</span><img src="{{img.Url}}" /></label>
+    <div class="container">
+        <img id="spinner" ng-src="Content/background/progressbar_cat.gif" width="100" />
+        <!--<div ng-repeat="img in data" class="repeat">
+            <label for="{{img.Name}}" class="grid-item"><img src="{{img.Url}}" ng-class="{:img.isPrew}" ng-click="img.isPrew = !img.isPrew"/></label>
+        </div>-->
+        <div ng-repeat="img in data" class="prev" ng-class="{full:img.isPrew, prev:!img.isPrew}">
+            <div class="image-name" ng-show="img.isPrew">{{img.Name}}</div>
+            <span class="closebtn" ng-click="remove(img.Id)">&times;</span>
+            <img src="{{img.Url}}" ng-click="clearClassFull($index); img.isPrew = !img.isPrew" />
+            <div class="image-date" ng-show="img.isPrew">{{img.CreationDate | date:'dd-M-yyyy'}}</div>
         </div>
     </div>
 </div>

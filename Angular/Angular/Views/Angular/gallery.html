@@ -1,11 +1,17 @@
 ﻿<div>
-    <div ng-repeat="img in data" class="repeat">
+    <!--<div ng-repeat="img in data" class="repeat">
         <input type="checkbox" class="invisible" id="{{img.Name}}"/>
         <label for="{{img.Name}}" class="lightbox"><img src="{{img.Url}}"/></label>
-    </div>
-    <div class="grid">
-        <div ng-repeat="img in data" class="repeat">
-            <label for="{{img.Name}}" class="grid-item"><img src="{{img.Url}}"/></label>
+    </div>-->
+    <div class="container">
+        <img id="spinner" ng-src="Content/background/progressbar_cat.gif" width="100"/>
+        <!--<div ng-repeat="img in data" class="repeat">
+            <label for="{{img.Name}}" class="grid-item"><img src="{{img.Url}}" ng-class="{:img.isPrew}" ng-click="img.isPrew = !img.isPrew"/></label>
+        </div>-->
+        <div ng-repeat="img in data" class="prev" ng-class="{full:img.isPrew, prev:!img.isPrew}">
+            <div class="image-name" ng-show="img.isPrew">{{img.Name}}</div>
+            <img src="{{img.Url}}" ng-click="clearClassFull($index); img.isPrew = !img.isPrew" />
+            <div class="image-date" ng-show="img.isPrew">{{img.CreationDate | date:'dd-M-yyyy'}}</div>
         </div>
     </div>
 </div>

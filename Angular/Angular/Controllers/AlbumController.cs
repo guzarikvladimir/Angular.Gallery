@@ -34,8 +34,8 @@ namespace Angular.Controllers
         }
 
         public JsonResult GetAlbums(int id)
-        {
-            var albums = albumService.GetByUserId(id);
+        {            var albums = albumService.GetByUserId(id);
+
             ArrayList list = new ArrayList
             {
                 new {id = int.MaxValue, name = "--Show All--"}
