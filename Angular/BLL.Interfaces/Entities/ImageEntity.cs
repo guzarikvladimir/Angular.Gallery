@@ -11,6 +11,10 @@ namespace BLL.Interfaces.Entities
         public int AlbumId { get; set; }
         public bool IsTradable { get; set; }
         public DateTime? CreationDate { get; set; }
+        public bool? IsBought { get; set; }
+        public int? UserId { get; set; }
+        public decimal? Price { get; set; }
+
 
         public AlbumEntity Album { get; set; }
     }

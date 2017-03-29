@@ -63,11 +63,11 @@
     function ($q, $location) {
         return {
             request: function (request) {
-                $("#spinner").show();
+                $(".spinner").show();
                 return request;
             },
             response: function (response) {
-                $("#spinner").hide();
+                $(".spinner").hide();
                 if (response.status === 401) {
                     console.log("Response 401");
                 };
@@ -335,8 +335,17 @@
         $scope.albums.selected = $scope.albums.available[0];
     });
 
+    $scope.clearClassFull = function ($index) {
+        var images = $scope.data;
+        for (var i = 0; i < images.length; i++) {
+            if (i !== $index) {
+                images[i].isPrew = false;
+            }
+        }
+    }
+
     $scope.add = function () {
-        dataCenter.add($scope.img.name, $scope.img.data, $scope.img.description, $scope.albums.selected.id, $scope.img.isTradable)
+        dataCenter.add($scope.img.name, $scope.img.data, $scope.img.description, $scope.albums.selected.id, $scope.img.isTradable, $scope.img.price)
             .then(function () {
                 $scope.img.name = "";
                 $scope.img.data = "";
@@ -435,6 +444,18 @@
             url: 'http://localhost:54287/Image/GetDescription'
         });
         return respons;
+    };
+
+    var cart = [];
+
+    function addToCart(img) {
+        cart.push(img);
+    }
+    function removeFormCart($index) {
+        cart.slice($index, 1);
+    }
+    function getCart() {
+        return cart;
     }
 
     return {
@@ -444,7 +465,10 @@
         getAlbumsForCurrentUser: getAlbumsForCurrentUser,
         createAlbum: createAlbum,
         getImagesForAlbum: getImagesForAlbum,
-        getDescription: getDescription
+        getDescription: getDescription,
+        addToCart: addToCart,
+        removeFormCart: removeFormCart,
+        getCart: getCart
     }
 }])
 .directive("fileread", [function () {

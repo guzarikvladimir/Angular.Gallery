@@ -27,7 +27,10 @@ namespace DAL.Concrete
                 AlbumId = image.AlbumId,
                 ExtensionId = image.ExtensionId,
                 IsTradable = image.isTradable.Value,
-                CreationDate = image.CreationDate.Value
+                CreationDate = image.CreationDate.Value,
+                IsBought = image.IsBought,
+                UserId = image.UserId,
+                Price = image.Price
             });
         }
 
@@ -42,7 +45,10 @@ namespace DAL.Concrete
                 AlbumId = image.AlbumId,
                 ExtensionId = image.ExtensionId,
                 IsTradable = image.isTradable.Value,
-                CreationDate = image.CreationDate.Value
+                CreationDate = image.CreationDate.Value,
+                IsBought = image.IsBought,
+                UserId = image.UserId,
+                Price = image.Price
             };
         }
 
@@ -56,7 +62,10 @@ namespace DAL.Concrete
                 AlbumId = image.AlbumId,
                 ExtensionId = image.ExtensionId,
                 IsTradable = image.isTradable.Value,
-                CreationDate = image.CreationDate.Value
+                CreationDate = image.CreationDate.Value,
+                IsBought = image.IsBought,
+                UserId = image.UserId,
+                Price = image.Price
             });
         }
 
@@ -70,7 +79,10 @@ namespace DAL.Concrete
                 AlbumId = image.AlbumId,
                 ExtensionId = image.ExtensionId,
                 IsTradable = image.isTradable.Value,
-                CreationDate = image.CreationDate.Value
+                CreationDate = image.CreationDate.Value,
+                IsBought = image.IsBought,
+                UserId = image.UserId,
+                Price = image.Price
             });
         }
 
@@ -83,7 +95,10 @@ namespace DAL.Concrete
                 AlbumId = e.AlbumId,
                 ExtensionId = e.ExtensionId,
                 isTradable = e.IsTradable,
-                CreationDate = e.CreationDate
+                CreationDate = e.CreationDate,
+                IsBought = e.IsBought,
+                UserId = e.UserId,
+                Price = e.Price
             });
         }
 
@@ -98,7 +113,17 @@ namespace DAL.Concrete
 
         public void Update(DalImage e)
         {
-            throw new NotImplementedException();
+            var image = context.Set<Image>().FirstOrDefault(img => img.Id == e.Id);
+            if (image != null)
+            {
+                image.Name = e.Name;
+                image.Description = e.Description;
+                image.AlbumId = e.AlbumId;
+                image.isTradable = e.IsTradable;
+                image.IsBought = e.IsBought;
+                image.UserId = e.UserId;
+                image.Price = e.Price;
+            }
         }
     }
 }

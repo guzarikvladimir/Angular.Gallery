@@ -16,7 +16,10 @@
                     ng-options="option.name for option in albums.available track by option.id"></select>
         </p>
         <p>
-            <label>Is tradable:<input type="checkbox" ng-model="img.isTradable" /></label>
+            <label>Is tradable:<input type="checkbox" ng-model="img.isTradable"/></label>
+        </p>
+        <p>
+            <input type="Number" ng-model="img.price" placeholder="Input price..."/>
         </p>
         <p>
             <input type="button" value="add" ng-click="add()" />

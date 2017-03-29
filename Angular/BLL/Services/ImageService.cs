@@ -28,7 +28,10 @@ namespace BLL.Services
                 AlbumId = image.AlbumId,
                 ExtensionId = image.ExtensionId,
                 IsTradable = image.IsTradable,
-                CreationDate = image.CreationDate
+                CreationDate = image.CreationDate,
+                IsBought = image.IsBought,
+                UserId = image.UserId,
+                Price = image.Price
             }).ToList();
         }
 
@@ -43,7 +46,10 @@ namespace BLL.Services
                 AlbumId = image.AlbumId,
                 ExtensionId = image.ExtensionId,
                 IsTradable = image.IsTradable,
-                CreationDate = image.CreationDate
+                CreationDate = image.CreationDate,
+                IsBought = image.IsBought,
+                UserId = image.UserId,
+                Price = image.Price
             };
         }
 
@@ -58,7 +64,10 @@ namespace BLL.Services
                 AlbumId = image.AlbumId,
                 ExtensionId = image.ExtensionId,
                 IsTradable = image.IsTradable,
-                CreationDate = image.CreationDate
+                CreationDate = image.CreationDate,
+                IsBought = image.IsBought,
+                UserId = image.UserId,
+                Price = image.Price
             }).ToList();
         }
 
@@ -73,7 +82,10 @@ namespace BLL.Services
                 AlbumId = image.AlbumId,
                 ExtensionId = image.ExtensionId,
                 IsTradable = image.IsTradable,
-                CreationDate = image.CreationDate
+                CreationDate = image.CreationDate,
+                IsBought = image.IsBought,
+                UserId = image.UserId,
+                Price = image.Price
             }).ToList();
         }
 
@@ -86,7 +98,10 @@ namespace BLL.Services
                 AlbumId = image.AlbumId,
                 ExtensionId = image.ExtensionId,
                 IsTradable = image.IsTradable,
-                CreationDate = image.CreationDate
+                CreationDate = image.CreationDate,
+                IsBought = image.IsBought,
+                UserId = image.UserId,
+                Price = image.Price
             });
             uow.Commit();
         }
@@ -102,7 +117,20 @@ namespace BLL.Services
 
         public void Update(ImageEntity image)
         {
-            throw new System.NotImplementedException();
+            imageRepository.Update(new DalImage()
+            {
+                Id = image.Id,
+                Name = image.Name,
+                Description = image.Description,
+                AlbumId = image.AlbumId,
+                ExtensionId = image.ExtensionId,
+                IsTradable = image.IsTradable,
+                CreationDate = image.CreationDate,
+                IsBought = image.IsBought,
+                UserId = image.UserId,
+                Price = image.Price
+            });
+            uow.Commit();
         }
     }
 }

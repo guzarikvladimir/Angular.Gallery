@@ -30,6 +30,10 @@ namespace ORM
                 .WithRequired(e => e.Extension)
                 .WillCascadeOnDelete(false);
 
+            modelBuilder.Entity<Image>()
+                .Property(e => e.Price)
+                .HasPrecision(18, 0);
+
             modelBuilder.Entity<Role>()
                 .HasMany(e => e.Users)
                 .WithRequired(e => e.Role)

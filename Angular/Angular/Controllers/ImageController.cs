@@ -34,7 +34,11 @@ namespace Angular.Controllers
                 AlbumId = image.AlbumId,
                 ExtensionId = image.ExtensionId,
                 Url = Path.Combine("\\Content", "img", image.Name),
-                CreationDate = image.CreationDate.HasValue ? image.CreationDate.Value.ToUniversalTime().Subtract(new DateTime(1970,1,1,0,0,0, DateTimeKind.Utc)).TotalMilliseconds : new Nullable<double>()
+                CreationDate = image.CreationDate?.ToUniversalTime().Subtract(new DateTime(1970,1,1,0,0,0, DateTimeKind.Utc)).TotalMilliseconds,
+                IsBought = image.IsBought,
+                UserId = image.UserId,
+                Price = image.Price,
+                IsTradable = image.IsTradable
             }), JsonRequestBehavior.AllowGet);
         }
 
@@ -60,7 +64,11 @@ namespace Angular.Controllers
                 AlbumId = image.AlbumId,
                 ExtensionId = image.ExtensionId,
                 Url = Path.Combine("\\Content", "img", image.Name),
-                //CreationDate = image.CreationDate
+                CreationDate = image.CreationDate?.ToUniversalTime().Subtract(new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc)).TotalMilliseconds,
+                IsBought = image.IsBought,
+                UserId = image.UserId,
+                Price = image.Price,
+                IsTradable = image.IsTradable
             }));
         }
 
@@ -105,7 +113,10 @@ namespace Angular.Controllers
                 ExtensionId = extensionService.GetByName(extension).Id,
                 AlbumId = albumId,
                 IsTradable = isTradable,
-                CreationDate = DateTime.Now
+                CreationDate = DateTime.Now,
+                IsBought = false,
+                UserId = null,
+                Price = null
             });
 
             return Json(true, JsonRequestBehavior.AllowGet);

@@ -24,6 +24,12 @@ namespace ORM
         [Column(TypeName = "date")]
         public DateTime? CreationDate { get; set; }
 
+        public bool? IsBought { get; set; }
+
+        public int? UserId { get; set; }
+
+        public decimal? Price { get; set; }
+
         public virtual Album Album { get; set; }
 
         public virtual Extension Extension { get; set; }

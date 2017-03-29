@@ -1,27 +1,4 @@
-﻿.container {
-    text-align: center;
-    padding: 30px 20px;
-}
-
-.container .prev {
-    display: inline-block;
-    padding: 10px 10px;
-    width: 25%;
-}
-
-.prev > img {
-    width:100%;
-}
-
-.container .full {
-    display:block;
-}
-.full > img {
-    height: calc(100vh - 50px);
-}
-
-
-/*Basic style*/
+﻿/*Basic style*/
 body {
 	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
 	background-color: #CCC;
@@ -205,118 +182,6 @@ ul li:hover .underline { border-bottom-color: #777; }
 ul li:hover .dropOut { opacity: 1; margin-top: 8px; }
 /*menu style*/
 
-
-
-/*grid*/
-* {
-    box-sizing: border-box;
-}
-
-label[for] {
-    cursor: pointer;
-    text-align: center;
-}
-
-.invisible {
-    display: none;
-}
-
-.lightbox, .grid {
-    width: 100%;
-    position: absolute;
-    top: 270px;
-    left: 0;
-}
-
-.lightbox {
-    position: fixed;
-    top: 0;
-}
-
-@media screen and (max-width: 520px) {
-    .lightbox, .grid {
-        top: 170px;
-    }
-}
-
-.lightbox {
-    z-index: 1;
-    min-height: 100%;
-    overflow: auto;
-    -webkit-transform: scale(0);
-    -ms-transform: scale(0);
-    transform: scale(0);
-    -webkit-transition: -webkit-transform .5s ease-out;
-    transition: transform .5s ease-out;
-}
-
-    .lightbox img {
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        max-width: 96%;
-        max-height: 96%;
-        -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
-    }
-
-input[type="checkbox"]:checked + .lightbox {
-    -webkit-transform: scale(1);
-    -ms-transform: scale(1);
-    transform: scale(1);
-}
-
-input[type="checkbox"]:checked ~ .grid {
-    opacity: .125;
-}
-
-.grid {
-    padding: 16px;
-    overflow: inherit;
-    background-color: #CCC;
-    text-align: center;
-    -webkit-transition: opacity .75s;
-    transition: opacity .75s;
-}
-
-    .grid .grid-item {
-        display: inline-block;
-        width: 15%;
-        padding: 16px;
-        opacity: .75;
-        -webkit-transition: opacity .5s;
-        transition: opacity .5s;
-    }
-
-        .grid .grid-item:hover {
-            opacity: 1;
-            /*width: 100%;*/
-        }
-
-@media screen and (max-width: 1024px) {
-    .grid .grid-item {
-        width: 25%;
-        padding: 5px;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .grid .grid-item {
-        width: 100%;
-    }
-}
-
-.grid img {
-    max-width: 100%;
-    max-height: 100%;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
-}
-/*grid*/
-
-
-
 /* The close button */
 .closebtn {
     color: white;
@@ -325,6 +190,7 @@ input[type="checkbox"]:checked ~ .grid {
     line-height: 20px;
     cursor: pointer;
     transition: 0.3s;
+    position: relative;
     position: absolute;
 }
 
@@ -431,6 +297,95 @@ input[type="checkbox"]:checked ~ .grid {
     text-align: center;
 }
 
-#spinner {
+.spinner {
     position: absolute;
+    width: 95%;
 }
+.spinner img {
+    width: 100px;
+}
+
+/*preview-full*/
+.container {
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.prev {
+    display: inline-block;
+    padding: 10px 10px;
+    width: 11%;
+    opacity: 0.7;
+}
+
+.prev:hover {
+    opacity: 1;
+}
+
+@media screen and (max-width: 1600px) {
+    .prev {
+        width: 15%;
+    }
+}
+@media screen and (max-width: 1240px) {
+    .prev {
+        width: 18%;
+    }
+}
+@media screen and (max-width: 1040px) {
+    .prev {
+        width: 22%;
+    }
+}
+
+.prev img {
+    width:100%;
+}
+
+.full {
+    display:block;
+    text-align: center;
+    background-color: #777777;
+    box-shadow: 0 0 10px rgba(0,0,0,1);
+}
+.full .imgWrapper {
+    display: inline-block;
+    max-width: 95%;
+}
+.full .description {
+    float: left;
+    word-wrap: break-word;
+    margin: 0 10px;
+    width: 17%;
+    text-align: left;
+}
+.description > h5 {
+    margin: 0 0 5px 0;
+    text-align: center;
+    color: black;
+}
+.description > div > h5 {
+    margin: 0;
+    padding: 0;
+    color: midnightblue;
+}
+.description button {
+    width: 100%;
+    border: none;
+    opacity: 0.7;
+}
+.description button:hover {
+    opacity: 1;
+}
+.full img {
+    float: left;
+    max-width: 80%;
+    height: auto;
+}
+.image-name {
+    margin: 5px 0;
+}
+.image-date {
+    margin: 0 0;
+}
+/*preview-full*/

@@ -11,7 +11,9 @@ namespace DAL.Interfaces.DTO
         public int ExtensionId { get; set; }
         public bool IsTradable { get; set; }
         public DateTime? CreationDate { get; set; }
-
+        public bool? IsBought { get; set; }
+        public int? UserId { get; set; }
+        public decimal? Price { get; set; }
 
         public DalExtension Extension { get; set; }
         public DalAlbum Album { get; set; }

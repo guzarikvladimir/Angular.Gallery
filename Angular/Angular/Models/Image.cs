@@ -14,5 +14,9 @@ namespace Angular.Models
         public int AlbumId { get; set; }
         public int ExtensionId { get; set; }
         public double? CreationDate { get; set; }
+        public bool? IsBought { get; set; }
+        public int? UserId { get; set; }
+        public decimal? Price { get; set; }
+        public bool? IsTradable { get; set; }
     }
 }
