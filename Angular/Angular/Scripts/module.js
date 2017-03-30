@@ -405,6 +405,13 @@
             }
             return sum;
         };
+        
+        $scope.removeFromCart = function (imageId) {
+            dataCenter.removeFromCart(imageId).then(function () {
+                getCart();
+                getSum();
+            });
+        };
 
         $scope.clearClassFull = function ($index) {
             var images = $scope.data;
@@ -494,17 +501,17 @@
         return respons;
     };
 
-    //var cart = [];
-
-    //function addToCart(img) {
-    //    cart.push(img);
-    //}
-    //function removeFormCart($index) {
-    //    cart.slice($index, 1);
-    //}
-    //function getCart() {
-    //    return cart;
-    //}
+    function removeFromCart(imageId) {
+        var respons = $http({
+            method: "POST",
+            url: 'http://localhost:54287/Image/RemoveFromCart',
+            data: {
+                imageId: imageId
+            },
+            headers: { 'Accept': 'application/json' }
+        });
+        return respons;
+    }
 
     function addToCart(img) {
         var respons = $http({
@@ -540,7 +547,7 @@
         getImagesForAlbum: getImagesForAlbum,
         getDescription: getDescription,
         addToCart: addToCart,
-        //removeFormCart: removeFormCart,
+        removeFromCart: removeFromCart,
         getCart: getCart
     }
 }])

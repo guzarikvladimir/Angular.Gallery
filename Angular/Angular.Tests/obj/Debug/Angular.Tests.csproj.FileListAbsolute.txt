@@ -19,3 +19,13 @@ C:\Users\Sacris\Desktop\Angular\Angular.Tests\bin\Debug\ru\Microsoft.VisualStudi
 C:\Users\Sacris\Desktop\Angular\Angular.Tests\obj\Debug\Angular.Tests.csprojResolveAssemblyReference.cache
 C:\Users\Sacris\Desktop\Angular\Angular.Tests\obj\Debug\Angular.Tests.dll
 C:\Users\Sacris\Desktop\Angular\Angular.Tests\obj\Debug\Angular.Tests.pdb
+E:\Angular.Gallery\Angular\Angular.Tests\bin\Debug\Angular.Tests.dll
+E:\Angular.Gallery\Angular\Angular.Tests\bin\Debug\Angular.Tests.pdb
+E:\Angular.Gallery\Angular\Angular.Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+E:\Angular.Gallery\Angular\Angular.Tests\bin\Debug\nunit.framework.dll
+E:\Angular.Gallery\Angular\Angular.Tests\bin\Debug\WebDriver.dll
+E:\Angular.Gallery\Angular\Angular.Tests\bin\Debug\nunit.framework.xml
+E:\Angular.Gallery\Angular\Angular.Tests\bin\Debug\WebDriver.xml
+E:\Angular.Gallery\Angular\Angular.Tests\obj\Debug\Angular.Tests.csprojResolveAssemblyReference.cache
+E:\Angular.Gallery\Angular\Angular.Tests\obj\Debug\Angular.Tests.dll
+E:\Angular.Gallery\Angular\Angular.Tests\obj\Debug\Angular.Tests.pdb

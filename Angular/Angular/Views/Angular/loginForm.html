@@ -8,7 +8,7 @@
         </form>
     </div>
     <div ng-show="loginForm.loggedIn" class="greeting">
-        <h5>Hello, {{loginForm.emailAddress}}!</h5>
+        <h5 id="hello">Hello, {{loginForm.emailAddress}}!</h5>
         <button ng-click="logout()" class="logout">Logout</button>
     </div>
 </div>

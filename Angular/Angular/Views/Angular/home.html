@@ -1,9 +1,9 @@
 ﻿<div class="conteiner">
-    <p ng-show="!isEdit" ng-click="goEdit()">
+    <p id="goEdit" ng-show="!isEdit" ng-click="goEdit()">
         {{text}}
     </p>
     <div ng-show="isEdit">
-        <textarea ng-model="text" style="width: 100%" rows="10"></textarea>
-        <button ng-click="applyEdit()">Apply</button>
+        <textarea id="editArea" ng-model="text" style="width: 100%" rows="10"></textarea>
+        <button id="applyEdit" ng-click="applyEdit()">Apply</button>
     </div>
 </div>

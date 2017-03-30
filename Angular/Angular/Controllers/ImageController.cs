@@ -32,6 +32,15 @@ namespace Angular.Controllers
             return Json(true);
         }
 
+        public JsonResult RemoveFromCart(int imageId)
+        {
+            var image = imageService.GetById(imageId);
+            image.UserId = null;
+            image.IsBought = false;
+            imageService.Update(image);
+            return Json(true);
+        }
+
         public JsonResult GetCart(int userId)
         {
             var images = imageService.GetAll().Where(img => img.UserId == userId);
